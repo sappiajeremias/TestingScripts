@@ -10,4 +10,4 @@ Mail jeremiassappia@gmail.com
 
 Degree: University Technician student in Web Development
 
-LinkedIn: <a href="https://www.linkedin.com/in/jeremias-sappia-a83028214/" target="_blank"><p>Jeremias Sappia</p></a>
+<a href="https://www.linkedin.com/in/jeremias-sappia-a83028214/" target="_blank"><p>LinkedIn</p></a>
