@@ -25,7 +25,7 @@
             let nombre = "Jere";
             let saludo = `Hola ${nombre}, como estas?`;
 
-*/
+
 
 //Historia de roberto, capitulo 1:
 
@@ -82,5 +82,20 @@ if (pedro >= 0.6 && pedro < 1) {
     alert("Pedro no se puede comprar nada.");
 }
 
+//Fin historia Cofla: primer capitulo
 
-/*
+    Arrays: Arreglos, conjuntos de elementos dentro de una variable
+        - let arreglo = ["Jere", 15, true];
+        - Para acceder a sus posiciones, de 0 en adelante:
+            document.write(arreglo[0]);
+    Arrays asociativos: los elementos estan en posiciones dadas por un string y no por un entero
+        - let pc = {
+            procesador: "AMD Ryzen 5", 
+            ram: 16,
+            grafica: "Geforce GTX 1650"
+        };
+        Para acceder a los elementos por sus etiquetas:
+            document.write(pc["ram"]);
+        let frase = `El procesador de mi pc es: ${pc["procesador"]}.<br>Su memoria ram es de: ${pc["ram"]}.<br>Y su grafica es: ${pc["grafica"]}<br>`;
+
+*/
