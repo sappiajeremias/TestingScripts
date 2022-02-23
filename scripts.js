@@ -27,4 +27,60 @@
 
 */
 
-//Historia de Cofla, capitulo 1:
+//Historia de roberto, capitulo 1:
+
+
+let cofla = prompt("Por favor ingrese el dinero de Cofla: ");
+let roberto = prompt("Luego, ingrese el dinero de Roberto: ");
+let pedro = prompt("Ingrese el dinero de Pedro: ");
+
+if (cofla >= 0.6 && cofla < 1) {
+    alert("Cofla puede comprar helado de agua.");
+    alert("Y te sobran: " + (cofla - 0.6));
+} else if (cofla >= 1 && cofla < 1.6) {
+    alert("Cofla puede comprar helado de crema.");
+    alert("Y te sobran: " + (cofla - 1));
+} else if (cofla >= 1.6 && cofla < 1.7) {
+    alert("Cofla puede comprar helado dos bochas.");
+    alert("Y te sobran: " + (cofla - 1.6));
+} else if (cofla >= 1.7) {
+    alert("Cofla puede comprar 1/4 de helado.");
+    alert("Y te sobran: " + (cofla - 1.7));
+} else {
+    alert("Cofla no se puede comprar nada.");
+}
+
+if (roberto >= 0.6 && roberto < 1) {
+    alert("Roberto puede comprar helado de agua.");
+    alert("Y te sobran: " + (roberto - 0.6));
+} else if (roberto >= 1 && roberto < 1.6) {
+    alert("Roberto puede comprar helado de crema.");
+    alert("Y te sobran: " + (roberto - 1));
+} else if (roberto >= 1.6 && roberto < 1.7) {
+    alert("Roberto puede comprar helado dos bochas.");
+    alert("Y te sobran: " + (roberto - 1.6));
+} else if (roberto >= 1.7) {
+    alert("Roberto puede comprar 1/4 de helado.");
+    alert("Y te sobran: " + (roberto - 1.7));
+} else {
+    alert("Roberto no se puede comprar nada.");
+}
+
+if (pedro >= 0.6 && pedro < 1) {
+    alert("Pedro puede comprar helado de agua.");
+    alert("Y te sobran: " + (pedro - 0.6));
+} else if (pedro >= 1 && pedro < 1.6) {
+    alert("Pedro puede comprar helado de crema.");
+    alert("Y te sobran: " + (pedro - 1));
+} else if (pedro >= 1.6 && pedro < 1.7) {
+    alert("Pedro puede comprar helado dos bochas.");
+    alert("Y te sobran: " + (pedro - 1.6));
+} else if (pedro >= 1.7) {
+    alert("Pedro puede comprar 1/4 de helado.");
+    alert("Y te sobran: " + (pedro - 1.7));
+} else {
+    alert("Pedro no se puede comprar nada.");
+}
+
+
+/*
