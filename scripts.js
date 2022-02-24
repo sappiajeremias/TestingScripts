@@ -98,4 +98,49 @@ if (pedro >= 0.6 && pedro < 1) {
             document.write(pc["ram"]);
         let frase = `El procesador de mi pc es: ${pc["procesador"]}.<br>Su memoria ram es de: ${pc["ram"]}.<br>Y su grafica es: ${pc["grafica"]}<br>`;
 
+    Repetitivas: funciones que ejecutan un bloque varias veces mientras se cumpla una condicion
+        while: se ejecuta 0 o mas veces
+            - while (condicion) {
+                bloqueDeInstrucciones;
+            }
+        do while: se ejecuta al menos una vez
+            - do {
+                bloqueDeInstrucciones;
+            } while (condicion)
+        break: finaliza la repetitiva de manera forzada
+        for: repite el bloque de instrucciones mientras que se cumpla la condicion con la variable numerica
+            - for (let i = 0; i <= 5; i++) {
+                bloqueDeInstrucciones;
+            }
+        continue: finaliza el bloque de instrucciones por ese unica iteracion
+            - for (let i = 0; i < 5; i++){
+                if (i == 2){
+                    continue;
+                }
+                document.write(i);
+            }
+        for in: devuelve la posicion de los elementos en un arreglo
+        for of: devuelve el contenido en las posiciones de un arreglo
+            - let animales = ["Perro", "Gato", "Pez"];
+            - for (animal in animales){
+                document.write(animal);  // 0, 1, 2
+                document.write(animales[animal]);  // Perro, Gato, Pez
+            }
+            - for (animal of animales){
+                document.write(animal);  // Perro, Gato, Pez
+            }
+        label: etiqueta que se le puede dar a los bucles
+            - let animales1 = ["Perro", "Gato", "Pez"];
+            - let animales2 = ["Pajaro", animales1, "Gallina"];
+            - forAnimales:
+                for (animal in animales2){
+                    if (animal == 1){
+                        for(animal of animales1){
+                            document.write(animal);
+                            break forAnimales;
+                        }
+                    } else {
+                        document.write(animal);
+                    }
+                }
 */
