@@ -27,7 +27,7 @@
 
 
 
-//Historia de roberto, capitulo 1:
+//Historia de Cofla, capitulo 1:
 
 
 let cofla = prompt("Por favor ingrese el dinero de Cofla: ");
@@ -143,4 +143,96 @@ if (pedro >= 0.6 && pedro < 1) {
                         document.write(animal);
                     }
                 }
+
+    Funciones: 
+        function: palabra reservada para crear una funcion
+            - function saludar (){
+                respuesta = prompt("Hola, como fue tu dia?");
+                if (respuesta == "Bien"){
+                    alert("Que bueno!")
+                } else {
+                    alert ("Una pena")
+                }
+            }
+            - saludar();
+            - saludar();
+        return: retorno que devuelve la funcion
+        parametros: valores que van a tomar las variables dentro de esa funcion
+            - function suma (num1, num2) {
+                let res = num1 + num2;
+                return res;
+            }
+            - let resultado = suma(25, 45);
+        funciones flecha: una manera "resumida" de crear una funcion
+            - const/let nombreFuncion = (parametros) => {
+                bloqueDeInstrucciones
+            }
+ 
+// Historia de Cofla capitulo 2:
+    Crear una solucion para la entrada de una fiesta: chequear que el cliente sea mayor a 18 años, y chequeando el tiempo, a partir de las 2 pasa gratis el primer cliente
+        let gratis = false;
+        const chequearCliente = (hora) => {
+            let edad = prompt("Cual es tu edad?");
+            if (edad >= 18) {
+                if ((hora >= 2) && (hora < 7) && !(gratis)){
+                    alert("Felicidades, podes pasar gratis!");
+                    gratis = true;
+                } else {
+                    alert("Podes pasar pero tenes que pagar.");
+                }
+            } else {
+                alert("Sos menor de edad, no podes pasar.");
+            }
+        }
+        chequearCliente(12);
+        chequearCliente(1);
+        chequearCliente(2.3);
+        chequearCliente(2.6);
+        chequearCliente(5);
+        chequearCliente(7);
+// Fin historia de Cofla capitulo 2.
+
+    console.log : salida de datos pero en la consola, no se muestra en pantalla.
+    POO (Programacion orientada a objetos):
+        - clase: es la plantilla del objeto
+        - objeto: son el resultado de la plantilla creada por la clase
+        - atributos: propiedades o caracteristicas del objeto
+        - metodo: son las acciones o cosas que puede hacer ese objetos
+        - constructor: funcion obligatoria de la clase
+        EJ:
+            class animal {
+                constructor(especie, edad, peso) {
+                    this.especie = especie;
+                    this.edad = edad;
+                    this.peso = peso;
+                    this.informacion = `Soy ${this.especie}, tengo ${this.edad} y peso ${this.peso}`;
+                }
+                verInfo() {
+                    document.write(this.informacion);
+                }
+            }
+            const perro = new animal("perro", 15, 25);
+            console.log(perro);
+            perro.verInfo();
+    encapsulamiento: privar de ciertos datos al usuario, datos que no son importantes para el.
+    polimorfismo: como un objeto se comporta ante un metodo dependiendo a sus propiedades.
+    herencia: una clase que toma las propiedades de una clase pero tiene algunas adicionales
+    metodos estaticos: metodo que no necesita que se cree el objeto. Se usa la palabra reservada static.
+    metodos accesores: metodos set y get que permiten darle valor(set) y devolver el mismo(get). No son funciones por lo cual no se acceden con () al final. 
+    EJ class animal: 
+            class Perro extends Animal {
+                constructor(especie, edad, peso, raza) {
+                    super(especie, edad, peso);
+                    this.raza = null;
+                }
+                static ladrar() {
+                    alert(`Wow!`);
+                }
+                set setRaza(newRaza) {
+                    this.raza = newRaza;
+                }
+                get getRaza() {
+                    return this.raza;
+                }
+            }
 */
