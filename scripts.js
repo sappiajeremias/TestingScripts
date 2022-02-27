@@ -235,4 +235,84 @@ if (pedro >= 0.6 && pedro < 1) {
                     return this.raza;
                 }
             }
+
+//Historia de Cofla capitulo 3:
+    Mostrar 3 celulares distintos que puedan prender, reiniciar, apagar, tomar fotos y grabar.
+        class Celular {
+            constructor(color, peso, resolucionPantalla, resolucionCamara, memoriaRam) {
+                this.color = color;
+                this.peso = peso;
+                this.resolucionPantalla = resolucionPantalla;
+                this.resolucionCamara = resolucionCamara;
+                this.memoriaRam = memoriaRam;
+                this.encendido = false;
+            }
+            presionarBotonEncendido() {
+                if (this.encendido) {
+                    alert("Celular apagado.");
+                    this.encendido = false;
+                } else {
+                    alert("Celular encendido.");
+                    this.encendido = true;
+                }
+            }
+            reiniciarCelular() {
+                if (this.encendido) {
+                    alert("El celular se esta reiniciando.");
+                } else {
+                    alert("El celular esta apagado.");
+                }
+            }
+            tomarFoto() {
+                alert(`Sonria! Foto tomada con resolucion de ${this.resolucionCamara} Mpx!`);
+            }
+            grabarVideo() {
+                alert(`Grabando video con resolucion de ${this.resolucionCamara} Mpx!`);
+            }
+            informacion() {
+                return `
+                Color: <b>${this.color}</b><br>
+                Peso: <b>${this.peso}</b><br>
+                Resolución de pantalla: <b>${this.resolucionPantalla}</b><br>
+                Resolución de cámara: <b>${this.resolucionCamara} Mpx</b><br>
+                Memoria RAM: <b>${this.memoriaRam}</b><br>`
+            }
+        }
+
+        class CelularAltaGama extends Celular {
+            constructor(color, peso, resolucionPantalla, resolucionCamara, memoriaRam) {
+                super(color, peso, resolucionPantalla, resolucionCamara, memoriaRam);
+                this.resolucionCamaraExtra = resolucionCamara;
+            }
+            grabarVideoLento() {
+                alert(`Grabando video lento con cámaras de ${this.resolucionCamaraExtra} Mpx`);
+            }
+            reconocimientoFacial() {
+                alert(`Realizando reconocimiento facial.`);
+                alert(`Reconocimiento facial completado.`)
+            }
+            informacionAltaGama() {
+                return this.informacion() + `Resolucion de cámara extra: <b>${this.resolucionCamaraExtra} Mpx</b><br>`
+            }
+        }
+
+        iphone = new Celular("Rojo", 750, "4K", 50, "4GB");
+        moto = new Celular("Negro", 500, "1980x1024", 60, "6GB");
+        samsung = new CelularAltaGama("Blanco", 600, "8K", 100, "8GB");
+
+        document.write(`
+        ${iphone.informacion()}<br>
+        ${moto.informacion()}<br>
+        ${samsung.informacionAltaGama()}<br>`);
+
+        iphone.tomarFoto();
+        moto.grabarVideo();
+        samsung.presionarBotonEncendido();
+        samsung.reiniciarCelular();
+        samsung.presionarBotonEncendido();
+        samsung.reconocimientoFacial();
+        
+//Fin historia de Cofla capitulo 3
+
+
 */
