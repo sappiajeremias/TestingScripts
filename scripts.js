@@ -314,5 +314,52 @@ if (pedro >= 0.6 && pedro < 1) {
         
 //Fin historia de Cofla capitulo 3
 
-
+    Metodos de cadenas 
+        concat() : junta dos o mas cadenas y retorna una nueva
+        startsWith(): devuelve true si una cadena comienza con los carateres de otra
+        endsWith(): devuelve true si una cadena termina con los carateres de otra
+        includes(): devuelve true si una cadena se encuentra dentro de otra
+        indexOf(): devuelve el indice del primer caracter de la cadena, si no existe, devuelve -1
+        lastIndexOf(): devuelve el ultimo indice del primer caracter de la cadena 
+        padStart(): rellenar cadena al principio con los caracteres deseados
+            EJ:
+                let cadena = "abc";
+                cadena.padStart(5, "x"); // "xxabc"
+        padEnd(): rellenar cadena al final con los caracteres deseados
+        repeat(): devuelve la misma cadena pero repetida la cantidad que se desee
+        split(): divide la cadena donde se le pida
+            EJ:
+                let cadena = "Hola me llamo Jere";
+                cadena.split(" "); // Divide la cadena en los espacios y retorna un array con todas las divisiones
+                cadena[3]; // "Jere"
+        substring(): crea una nueva cadena en base a dos indices
+            EJ:
+                let cadena = "ABCDEFG";
+                cadena.substring(2, 5)); // "CDE"
+        toLowerCase(): convierte la cadena a minuscula
+        toUpperCase(): convierte la cadena a mayuscula
+        toString(): convierte valores a strings
+        trim(): elimina los espacios en blanco
+        trimEnd(): elimina los espacios al final de la cadena
+        trimStart(): elimina los espacios al principio de la cadena
+        valueOf(): retorna el valor primitivo de un objeto string
+        .length (PROPIEDAD): retorna la cantidad de caracteres de la cadena
+      
+    Metodos de Arrays    
+        TRANSFORMADORES
+            pop(): elimina el ultimo elemento del array y devuelve ese elemento
+            shift(): elimina el primer elemento del array y devuelve ese elemento
+            push(): agrega un elemento al final del array y devuelve la nueva cantidad de elementos 
+            reverse(): invierte el orden de los elementos del array
+            unshift(): agrega uno o mas elementos al principio array y devuelve la nueva longitud
+            sort(): ordena los elementos de un arreglo localmente y devuelve el arreglo ordenado
+            splice(): cambia el contenido de un array eliminando o agregando elementos
+                EJ:
+                    let numeros = [5, 2, 3, 6, 7];
+                    numeros.splice(1, 3); // [5, 2]
+                    numeros.splice(0, 2, "Hola"); // ["Hola", 6, 7]
+                    numeros.splice(3, 0, 10, 20); // [5, 2, 3, 6, 10, 20, 7]
+                    numeros.splice(-1, 0, 10, 20); // [5, 2, 3, 6, 7, 10, 20]
+        ACCESORES (No modifican el array original, crean uno nuevo)
+            join(): crea una array con los elementos de otro en una cadena de texto y separado por otra cadena
 */
