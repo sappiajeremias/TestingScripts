@@ -605,4 +605,59 @@ if (pedro >= 0.6 && pedro < 1) {
             for (hijo of hijos) {
                 console.log(hijo);
             } // Se usa for of porque muestra el valor, for in muestra indices
+    
+    Metodos de childs
+        replaceChild()
+        removeChild()
+        hasChildNode()
+
+        EJ:
+            const contenedor = document.querySelector(".contenedor");
+            const h2_viejo = document.querySelector(".h2_viejo");
+            const parrafo = document.querySelector(".p_viejo");
+
+            const h2_nuevo = document.createElement("H2");
+            h2_nuevo.innerHTML = "Titulo nuevo";
+
+            contenedor.replaceChild(h2_nuevo, h2_viejo);
+            contenedor.removeChild(parrafo);
+
+            let respuesta = contenedor.hasChildNodes();
+            if (respuesta) {
+                alert("Hay hijos!")
+            }
+
+    Propiedades de padres (parents)
+        parentElement
+        parentNode
+
+        EJ:
+            const contenedor = document.querySelector(".contenedor");
+            const parrafo = document.querySelector(".p_viejo");
+
+            console.log(parrafo.parentElement); // contenedor
+            console.log(contenedor.parentNode); // body
+            console.log(contenedor.parentElement); // body
+
+    Propiedades de hermanos (siblings)
+        nextSibling
+        previousSibling
+        nextElementSibling
+        previousElementSibling
+
+        EJ:
+            const h2_viejo = document.querySelector(".h2_viejo");
+            const parrafo = document.querySelector(".p_viejo");
+
+            console.log(parrafo.nextElementSibling); // null
+            console.log(parrafo.previousElementSibling); // h2_viejo
+            console.log(h2_viejo.nextElementSibling); // parrafo
+            console.log(h2_viejo.previousElementSibling); // null
+
+    Nodos - Extras
+        closest(): busca el elemento padre mas cercano que contenga el elemento ingresado
+        
+        EJ:
+            const contenedor = document.querySelector(".div-3");
+            console.log(contenedor.closest(".div")); // DIV 2
 */
