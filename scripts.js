@@ -88,6 +88,7 @@ if (pedro >= 0.6 && pedro < 1) {
         - let arreglo = ["Jere", 15, true];
         - Para acceder a sus posiciones, de 0 en adelante:
             document.write(arreglo[0]);
+
     Arrays asociativos: los elementos estan en posiciones dadas por un string y no por un entero
         - let pc = {
             procesador: "AMD Ryzen 5", 
@@ -103,15 +104,19 @@ if (pedro >= 0.6 && pedro < 1) {
             - while (condicion) {
                 bloqueDeInstrucciones;
             }
+
         do while: se ejecuta al menos una vez
             - do {
                 bloqueDeInstrucciones;
             } while (condicion)
+
         break: finaliza la repetitiva de manera forzada
+
         for: repite el bloque de instrucciones mientras que se cumpla la condicion con la variable numerica
             - for (let i = 0; i <= 5; i++) {
                 bloqueDeInstrucciones;
             }
+
         continue: finaliza el bloque de instrucciones por ese unica iteracion
             - for (let i = 0; i < 5; i++){
                 if (i == 2){
@@ -119,7 +124,9 @@ if (pedro >= 0.6 && pedro < 1) {
                 }
                 document.write(i);
             }
+
         for in: devuelve la posicion de los elementos en un arreglo
+
         for of: devuelve el contenido en las posiciones de un arreglo
             - let animales = ["Perro", "Gato", "Pez"];
             - for (animal in animales){
@@ -129,6 +136,7 @@ if (pedro >= 0.6 && pedro < 1) {
             - for (animal of animales){
                 document.write(animal);  // Perro, Gato, Pez
             }
+
         label: etiqueta que se le puede dar a los bucles
             - let animales1 = ["Perro", "Gato", "Pez"];
             - let animales2 = ["Pajaro", animales1, "Gallina"];
@@ -145,6 +153,7 @@ if (pedro >= 0.6 && pedro < 1) {
                 }
 
     Funciones: 
+
         function: palabra reservada para crear una funcion
             - function saludar (){
                 respuesta = prompt("Hola, como fue tu dia?");
@@ -156,19 +165,23 @@ if (pedro >= 0.6 && pedro < 1) {
             }
             - saludar();
             - saludar();
+
         return: retorno que devuelve la funcion
+
         parametros: valores que van a tomar las variables dentro de esa funcion
             - function suma (num1, num2) {
                 let res = num1 + num2;
                 return res;
             }
             - let resultado = suma(25, 45);
+
         funciones flecha: una manera "resumida" de crear una funcion
             - const/let nombreFuncion = (parametros) => {
                 bloqueDeInstrucciones
             }
  
 // Historia de Cofla capitulo 2:
+
     Crear una solucion para la entrada de una fiesta: chequear que el cliente sea mayor a 18 años, y chequeando el tiempo, a partir de las 2 pasa gratis el primer cliente
         let gratis = false;
         const chequearCliente = (hora) => {
@@ -193,12 +206,14 @@ if (pedro >= 0.6 && pedro < 1) {
 // Fin historia de Cofla capitulo 2.
 
     console.log : salida de datos pero en la consola, no se muestra en pantalla.
+
     POO (Programacion orientada a objetos):
         - clase: es la plantilla del objeto
         - objeto: son el resultado de la plantilla creada por la clase
         - atributos: propiedades o caracteristicas del objeto
         - metodo: son las acciones o cosas que puede hacer ese objetos
         - constructor: funcion obligatoria de la clase
+
         EJ:
             class animal {
                 constructor(especie, edad, peso) {
@@ -214,11 +229,13 @@ if (pedro >= 0.6 && pedro < 1) {
             const perro = new animal("perro", 15, 25);
             console.log(perro);
             perro.verInfo();
+
     encapsulamiento: privar de ciertos datos al usuario, datos que no son importantes para el.
     polimorfismo: como un objeto se comporta ante un metodo dependiendo a sus propiedades.
     herencia: una clase que toma las propiedades de una clase pero tiene algunas adicionales
     metodos estaticos: metodo que no necesita que se cree el objeto. Se usa la palabra reservada static.
     metodos accesores: metodos set y get que permiten darle valor(set) y devolver el mismo(get). No son funciones por lo cual no se acceden con () al final. 
+
     EJ class animal: 
             class Perro extends Animal {
                 constructor(especie, edad, peso, raza) {
@@ -315,6 +332,7 @@ if (pedro >= 0.6 && pedro < 1) {
 //Fin historia de Cofla capitulo 3
 
     Metodos de cadenas 
+
         concat() : junta dos o mas cadenas y retorna una nueva
         startsWith(): devuelve true si una cadena comienza con los carateres de otra
         endsWith(): devuelve true si una cadena termina con los carateres de otra
@@ -322,20 +340,26 @@ if (pedro >= 0.6 && pedro < 1) {
         indexOf(): devuelve el indice del primer caracter de la cadena, si no existe, devuelve -1
         lastIndexOf(): devuelve el ultimo indice del primer caracter de la cadena 
         padStart(): rellenar cadena al principio con los caracteres deseados
+
             EJ:
                 let cadena = "abc";
                 cadena.padStart(5, "x"); // "xxabc"
+
         padEnd(): rellenar cadena al final con los caracteres deseados
         repeat(): devuelve la misma cadena pero repetida la cantidad que se desee
         split(): divide la cadena donde se le pida
+
             EJ:
                 let cadena = "Hola me llamo Jere";
                 cadena.split(" "); // Divide la cadena en los espacios y retorna un array con todas las divisiones
                 cadena[3]; // "Jere"
+
         substring(): crea una nueva cadena en base a dos indices
+
             EJ:
                 let cadena = "ABCDEFG";
                 cadena.substring(2, 5)); // "CDE"
+
         toLowerCase(): convierte la cadena a minuscula
         toUpperCase(): convierte la cadena a mayuscula
         toString(): convierte valores a strings
@@ -346,7 +370,9 @@ if (pedro >= 0.6 && pedro < 1) {
         .length (PROPIEDAD): retorna la cantidad de caracteres de la cadena
       
     Metodos de Arrays    
+
         TRANSFORMADORES
+
             pop(): elimina el ultimo elemento del array y devuelve ese elemento
             shift(): elimina el primer elemento del array y devuelve ese elemento
             push(): agrega un elemento al final del array y devuelve la nueva cantidad de elementos 
@@ -354,24 +380,33 @@ if (pedro >= 0.6 && pedro < 1) {
             unshift(): agrega uno o mas elementos al principio array y devuelve la nueva longitud
             sort(): ordena los elementos de un arreglo localmente y devuelve el arreglo ordenado
             splice(): cambia el contenido de un array eliminando o agregando elementos
+
                 EJ:
                     let numeros = [5, 2, 3, 6, 7];
                     numeros.splice(1, 3); // [5, 2]
                     numeros.splice(0, 2, "Hola"); // ["Hola", 6, 7]
                     numeros.splice(3, 0, 10, 20); // [5, 2, 3, 6, 10, 20, 7]
                     numeros.splice(-1, 0, 10, 20); // [5, 2, 3, 6, 7, 10, 20]
+
         ACCESORES (No modifican el array original, crean uno nuevo)
+
             join(): crea una cadena con los elementos de un array y separado por otra cadena
+
                 EJ:
                     let nombres = ["Pedro", "Pepe", "Pamela"];
                     let resultado = nombres.join("...-...")
                     document.write(resultado); // "Pedro...-...Pepe...-...Pamela"
+
             slice(): devuelve una parte del array en otro array nuevo, con inicio y fin que no se incluye
+
                 EJ:
                     let numeros = [5, 2, 3, 6, 7];
                     let cortado = numeros.slice(0, 3); // [5, 2, 3]
+
         DE REPETICION 
+
             filter(): crea un nuevo array con los elementos que cumplen la condicion
+
                 EJ:
                     let numeros = [5, 2, 3, 6, 7];
                     let resultado = numeros.filter((nums) => {
@@ -379,7 +414,9 @@ if (pedro >= 0.6 && pedro < 1) {
                             document.write(nums + "</br>")
                         }
                     }) // 2, 3
+
             forEach(): ejecuta la funcion indicada como en filter pero no crea un nuevo arreglo
+
                 EJ:
                     let numeros = [5, 2, 3, 6, 7];
                     let resultado = []
@@ -388,7 +425,9 @@ if (pedro >= 0.6 && pedro < 1) {
                             resultado.push(nums);
                         }
                     }) // 2, 3
+
     Objeto Math
+
         sqrt(): raiz cuadrada
         cbrt(): raiz cubica
         max(): devuelve el mayor de cero o mas numeros
@@ -404,6 +443,7 @@ if (pedro >= 0.6 && pedro < 1) {
 //Fin historia de Cofla capitulo 4
 
     Console (console.funcion())
+    
         FUNCIONES DE REGISTRO
             assert(): aparece error en la consola si es falso
             clear(): limpia la consola
@@ -467,5 +507,7 @@ if (pedro >= 0.6 && pedro < 1) {
             document.write("</br>" + tuNombre.getAttribute("type")); // number
             tuNombre.removeAttribute("type"); // Elimina el valor "type"
             document.write("</br>" + tuNombre.getAttribute("type")); // null, no existe y por defecto es text
+
+    Atributos Globales
 
 */
