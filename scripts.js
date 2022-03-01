@@ -509,5 +509,100 @@ if (pedro >= 0.6 && pedro < 1) {
             document.write("</br>" + tuNombre.getAttribute("type")); // null, no existe y por defecto es text
 
     Atributos Globales
+        
+        class: lista de clases del elemento separadas por espacios
+        contenteditable: indica si el elemento puede ser modificable por el usuario (true / false)
+        dir: indica la direccionalidad del texto
+        hidden: indica si el elemento aun no es, o ya no es, relevante
+        id: define un identificador unico
+        style: contiene declaraciones de estilo css
+        tabindex: indica si el elemento puede obtener un focus de input
+        title: contiene un texto con informacion relacionada al elemento al que pertenece
 
+        EJ: 
+            const titulo = document.querySelector(".titulo");
+            titulo.setAttribute("title", "Titulo principal");
+
+    Atributos de Inputs
+        
+        className
+        value
+        type
+        accept
+        form
+        minLength
+        placeholder
+        required
+
+        EJ:
+            const input = document.querySelector(".input-normal");
+            input.minLength = 4;
+            input.setAttribute("type", "number");
+            input.placeholder = "1 - 100";
+            input.required = true;
+
+    Atributo style
+        
+        EJ:
+            const titulo = document.querySelector("#titulo");
+            titulo.style.color = "blue";
+            titulo.style.padding = "20px";
+            titulo.style.backgroundColor = "orange"
+
+    Classlist
+        add(): añade una clase
+        remove(): elimina una clase
+        item(): devuelve la clase del indice indicado
+        contains(): verifica si el elemento contiene la clase especificada
+        replace(): reemplaza una clase por otra
+        toggle(): si no tiene la clase especificada, la agrega, y si la tiene, la elimina
+
+        EJ:
+            const titulo = document.querySelector(".titulo");
+            titulo.classList.add("texto-clases")
+            let claseIndex = titulo.classList.item(2); // "eliminar"
+
+    Obtencion y modificacion de elementos
+        textContent: devuelve el texto de cualquier nodo sin incluir etiquetas
+        innerText
+        outerText
+        innerHTML: devuelve el contenido HTML de un elemento 
+        outerHtml: devuelve el codigo HTML completo de un elemento
+
+    Creacion de elementos
+        createElement()
+        createTextNode()
+        appendChild()
+        createDocumentFragment()
+
+        EJ:
+            const contenedor = document.querySelector("#contenedor");
+            const fragmento = document.createDocumentFragment();
+
+            for (let i = 0; i < 10; i++) {
+                const item = document.createElement("LI");
+                item.innerHTML = "Item de la lista numero " + i;
+                fragmento.appendChild(item);
+            }
+
+            contenedor.appendChild(fragmento);
+
+    Obtencion y modificacion de hijos ( childs )
+        firstChild
+        lastChild
+        firstElementChild
+        lastElementChild
+        childNodes
+        children
+
+        EJ:
+            const contenedor = document.querySelector(".contenedor");
+            const primerHijo = contenedor.firstElementChild;
+            console.log(primerHijo);
+            const hijos = contenedor.children;
+            console.log(hijos);
+
+            for (hijo of hijos) {
+                console.log(hijo);
+            } // Se usa for of porque muestra el valor, for in muestra indices
 */
