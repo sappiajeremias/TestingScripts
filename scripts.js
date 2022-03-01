@@ -361,5 +361,111 @@ if (pedro >= 0.6 && pedro < 1) {
                     numeros.splice(3, 0, 10, 20); // [5, 2, 3, 6, 10, 20, 7]
                     numeros.splice(-1, 0, 10, 20); // [5, 2, 3, 6, 7, 10, 20]
         ACCESORES (No modifican el array original, crean uno nuevo)
-            join(): crea una array con los elementos de otro en una cadena de texto y separado por otra cadena
+            join(): crea una cadena con los elementos de un array y separado por otra cadena
+                EJ:
+                    let nombres = ["Pedro", "Pepe", "Pamela"];
+                    let resultado = nombres.join("...-...")
+                    document.write(resultado); // "Pedro...-...Pepe...-...Pamela"
+            slice(): devuelve una parte del array en otro array nuevo, con inicio y fin que no se incluye
+                EJ:
+                    let numeros = [5, 2, 3, 6, 7];
+                    let cortado = numeros.slice(0, 3); // [5, 2, 3]
+        DE REPETICION 
+            filter(): crea un nuevo array con los elementos que cumplen la condicion
+                EJ:
+                    let numeros = [5, 2, 3, 6, 7];
+                    let resultado = numeros.filter((nums) => {
+                        if (nums <= 4) {
+                            document.write(nums + "</br>")
+                        }
+                    }) // 2, 3
+            forEach(): ejecuta la funcion indicada como en filter pero no crea un nuevo arreglo
+                EJ:
+                    let numeros = [5, 2, 3, 6, 7];
+                    let resultado = []
+                    numeros.forEach((nums) => {
+                        if (nums <= 4) {
+                            resultado.push(nums);
+                        }
+                    }) // 2, 3
+    Objeto Math
+        sqrt(): raiz cuadrada
+        cbrt(): raiz cubica
+        max(): devuelve el mayor de cero o mas numeros
+        min(): devuelve el numero menor
+        random(): devuelve un numero aleatorio entre 0 y 1
+        round(): devuelve el valor redondeado al entero mas cercano
+        floor(): devuelve el entero redondeado para abajo
+        fround(): devuelve la representacion flotante de precision simple mas cercana
+        trunc(): devuelve la parte entera del numero x, elimina los digitos fraccionarios
+
+// Historia de Cofla capitulo 4
+
+//Fin historia de Cofla capitulo 4
+
+    Console (console.funcion())
+        FUNCIONES DE REGISTRO
+            assert(): aparece error en la consola si es falso
+            clear(): limpia la consola
+            error(): muestra un mensaje de error
+            info(): muestra un mensaje informativo
+            log(): muestra un mensaje
+            table(): toma un argumento, que debe ser un array o un objeto y lo muestra como una tabla con sus indices
+            warn(): muestra un mensaje de advertencia
+            dir(): muestra una lista interactiva con las propiedades de un objeto
+        FUNCIONES DE CONTEO
+            count(): registra el numero de veces que se llama a count()
+            countReset(): resetea el contador de console.count()
+        FUNCIONES DE AGRUPACION
+            group(): crea un grupo en linea en el registro
+            groupEnd(): remueve un grupo en linea en el registro
+            gropuCollapsed(): crea un grupo en linea pero colapsado, el usuario debe expandirlo
+        FUNCIONES DE TEPORIZACION
+            time(): comienza un contador desde que se inicio
+            timeLog(): muestra la cantidad de tiempo que paso 
+            timeEnd(): finaliza el contador y muestra cuanto tardo
+        Modificar estilos de texto en la consola
+            console.log("%cHola", "color: red; background: black; border: 3px solid blue");
+
+// Historia de Cofla capitulo 4
+
+//Fin historia de Cofla capitulo 4
+
+    DOM: Documen Object Model (Interfaz que proporciona un conjunto estandar de objetos)
+
+    Nodo: Un nodo en el DOM es cualquier etiqueta del cuerpo, incluida la misma etiqueta body
+        Document: nodo raiz, todos los demas derivan de este
+        Element: nodos definidos por etiquetas html
+        Text: el texto dentro de un nodo element
+        Attribute: los atributos de las etiquetas(informacion asociada a un nodo Element)
+        Comentarios y otros: los comentarios y otros elementos como las declaraciones doctype, etc.
+
+    Metodos de seleccion de elementos (document.metodo())
+        getElementById(): selecciona un elemento por ID
+        getElementsByTagName(): selecciona todos los elementos que coincidan con el nombre de la etiqueta especificada
+        querySelector(): devuelve el primer elemento que coincida con el grupo especificado de sectores
+        querySelectorAll(): devuelve todos los elementos que ocincidan con el grupo especificado de selectores
+
+        EJ:
+            parrafo = document.getElementById("parrafo");
+            textos = document.getElementsByTagName("p"); // Devuelve la coleccion como una lista de objetos, se pueden acceder a ellos como si fueran un array
+            textosEstilos = document.querySelector(".claseEstilos"); // Funciona con clases con un . y con ids con un #
+            seleccionTextos = document.querySelectorAll("#parrafo"); // Devuelve la coleccion que coincida con la clase o el id, se pueden acceder a ellos como si fueran un array
+            document.write(parrafo); // [object HTMLParagraphElement]
+            document.write(textos); // [object HTMLCollection]
+            document.write(textosEstilos); // [object HTMLParagraphElement]
+            document.write(seleccionTextos); // [object NodeList]
+    
+    Metodos para definir, obtener y eliminar atributos
+        setAttribute(): modifica el valor de un atributo
+        getAttribute(): obtiene el valor de un atributo
+        removeAttribute(): elimina el valor de un atributo
+
+        EJ:
+            const tuNombre = document.querySelector(".tuNombre");
+            tuNombre.setAttribute("type", "number"); // Cambia el tipo de input a number
+            document.write("</br>" + tuNombre.getAttribute("type")); // number
+            tuNombre.removeAttribute("type"); // Elimina el valor "type"
+            document.write("</br>" + tuNombre.getAttribute("type")); // null, no existe y por defecto es text
+
 */
