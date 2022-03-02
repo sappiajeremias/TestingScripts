@@ -438,10 +438,6 @@ if (pedro >= 0.6 && pedro < 1) {
         fround(): devuelve la representacion flotante de precision simple mas cercana
         trunc(): devuelve la parte entera del numero x, elimina los digitos fraccionarios
 
-// Historia de Cofla capitulo 4
-
-//Fin historia de Cofla capitulo 4
-
     Console (console.funcion())
     
         FUNCIONES DE REGISTRO
@@ -466,10 +462,6 @@ if (pedro >= 0.6 && pedro < 1) {
             timeEnd(): finaliza el contador y muestra cuanto tardo
         Modificar estilos de texto en la consola
             console.log("%cHola", "color: red; background: black; border: 3px solid blue");
-
-// Historia de Cofla capitulo 4
-
-//Fin historia de Cofla capitulo 4
 
     DOM: Documen Object Model (Interfaz que proporciona un conjunto estandar de objetos)
 
@@ -660,4 +652,43 @@ if (pedro >= 0.6 && pedro < 1) {
         EJ:
             const contenedor = document.querySelector(".div-3");
             console.log(contenedor.closest(".div")); // DIV 2
+
+// Historia Cofla capitulo Final
+
+    const contenedor = document.querySelector(".flex-container")
+    const fragmento = document.createDocumentFragment();
+
+    function crearLlave(nombre, modelo, precio) {
+        nombre = `<h1 class='nombre-llave'>${nombre}</h1><br>`;
+        modelo = `<h2 id='${modelo}' class='modelo-llave'>${modelo}</h2><br>`;
+        precio = `<h2 class='texto-precio-llave'>Precio: $ <b class='precio-llave'> ${precio}</b></h2><br>`;
+        imagen = "<img class='imagen-llave' src='assets/images/llave.png'>";
+        return [imagen, nombre, modelo, precio];
+    }
+
+    const changeHidden = (number) => {
+        document.querySelector(".key-data").value = number;
+    }
+
+    for (let i = 1; i <= 20; i++) {
+        //Creamos la llave
+        let modeloRandom = Math.round(Math.random() * 1000);
+        let precioRandom = Math.round(Math.random() * 10 + 30);
+        let llave = crearLlave(`Llave: ${i}`, `Modelo: ${modeloRandom}`, precioRandom);
+
+        //Creamos el item de la lista como un div
+        let div = document.createElement("DIV");
+        //Funcion que cambia el modelo de la llave al momento de clickearlo, para luego ser enviado al servidor
+        div.addEventListener("click", () => { changeHidden(modeloRandom) });
+        div.tabIndex = i;
+        div.classList.add(`item-${i}`, 'flex-item');
+        //Agregamos la llave al item
+        div.innerHTML = llave[0] + llave[1] + llave[2] + llave[3];
+        //Agregamos el item al fragmento
+        fragmento.appendChild(div);
+    }
+
+    //Agregamos finalmente el fragmento al container principal
+    contenedor.appendChild(fragmento);
+
 */

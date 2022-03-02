@@ -1,6 +1,90 @@
 body {
     color: black;
     font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.boton-comprar {}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 2px solid;
+    border-color: black;
+    border-style: double;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 300px;
+}
+
+.flex-item:hover {
+    border-color: #151D3B;
+    box-shadow: 0 0 10px #D82148;
+}
+
+.flex-item:focus {
+    border-color: #151D3B;
+    box-shadow: 0 0 10px #D82148;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+
+.imagen-llave {
+    width: 300px;
+    height: 300px;
+}
+
+input[type="submit"] {
+    background: #151D3B;
+    color: #DADBBD;
+    padding: 15px 30px;
+    font-size: 25px;
+    margin-right: 80px;
+}
+
+.modelo-llave {
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre-llave {
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.precio-llave {
+    color: slategrey;
+}
+
+.texto-precio-llave {
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: justify;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .texto-clases {
